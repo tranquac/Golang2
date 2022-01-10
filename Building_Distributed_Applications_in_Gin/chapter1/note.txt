@@ -1,0 +1,6 @@
+Chieu 29/12/2021
+Section 1: Inside the Gin Framework
+
+Request -> Router Parser -> Router Handler -> Response
+
+You can list your dependencies with the following command: go list -m all

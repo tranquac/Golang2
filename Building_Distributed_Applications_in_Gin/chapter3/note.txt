@@ -1,0 +1,32 @@
+#3 Managing Data Persistence with MongoDB
+
+In this chapter, we will cover the following topics:
+• Setting up MongoDB with Docker
+• Configuring Go MongoDB driver
+• Implementing MongoDB queries & and CRUD operations
+• Standard Go project layout
+• Deploying Redis with Docker
+• Optimizing API response time with caching
+• Performance benchmark with Apache Benchmark
+
+# Run MongoDB Docker
+docker run -d --name mongodb -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password -p 27017:27017 mongo:4.4.3
+
+docker rm -f container_name || true
+
+docker logs –f CONTAINER_ID
+
+LOGIN to MONGODB: mongodb://admin:password@IP:27017/test.
+
+Có thể sử dụng mongoimport để import json file
+mongoimport --username admin --password password --authenticationDatabase admin --db demo --collection recipes --file recipes.json --jsonArray
+
+# Run Redis Docker
+docker run -d --name redis -p 6379:6379 redis:6.0
+#add policy to conf file
+maxmemory-policy allkeys-lru
+maxmemory 512mb
+->docker run -d -v $PWD/conf:/usr/local/etc/redis --name redis -p 6379:6379 redis:6.0
+
+# Run Redis GUI docker
+docker run -d --name redisinsight --link redis -p 8001:8001 redislabs/redisinsight

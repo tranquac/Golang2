@@ -1,0 +1,9 @@
+# 4 Building API Authentication
+
+# In this chapter, we will focus on the following main topics:
+• Exploring authentication
+• Introducing JavaScript Object Notation (JSON) Web Tokens (JWTs)
+• Persisting client sessions and cookies
+• Authenticating with Auth0
+• Building an HTTPS server
+

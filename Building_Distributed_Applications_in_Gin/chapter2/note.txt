@@ -1,0 +1,21 @@
+Toi 29/12/2021
+Section 2: Distributed Microservices 
+
+# GEN DOC API
+// Host: localhost:8080
+// BasePath: /
+// Version: 1.0.0
+// Contact: Tran Quac
+// Consumes:
+// - application/json
+//
+// Produces:
+// - application/json
+// swagger:meta
+package main
+
+swagger generate spec –o ./swagger.json
+
+swagger serve ./swagger.json
+
+swagger serve -F swagger ./swagger.json
